@@ -1,5 +1,13 @@
 {
-  "orgName": "Demo company",
+  "orgName": "bunai-crm scratch org",
   "edition": "Developer",
-  "features": []
+  "features": [],
+  "settings": {
+    "lightningExperienceSettings": {
+        "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+        "enableS1EncryptedStoragePref2": false
+    }
+  }
 }
