@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>上期</fullName>
+        <default>false</default>
+        <label>上期</label>
+    </customValue>
+    <customValue>
+        <fullName>下期</fullName>
+        <default>false</default>
+        <label>下期</label>
+    </customValue>
+    <masterLabel>上期/下期</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
