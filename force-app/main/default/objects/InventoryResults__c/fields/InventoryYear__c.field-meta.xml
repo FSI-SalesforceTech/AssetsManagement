@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>InventoryYear__c</fullName>
     <externalId>false</externalId>
-    <label>棚卸年度</label>
+    <label>棚卸年度No.</label>
     <referenceTo>Inventory__c</referenceTo>
     <relationshipLabel>棚卸結果</relationshipLabel>
     <relationshipName>InventoryYear</relationshipName>

@@ -155,8 +155,9 @@
     <externalSharingModel>Private</externalSharingModel>
     <label>棚卸</label>
     <nameField>
-        <label>年度</label>
-        <type>Text</type>
+        <displayFormat>I-{YYYY}{MM}-{0000}</displayFormat>
+        <label>棚卸No.</label>
+        <type>AutoNumber</type>
     </nameField>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
