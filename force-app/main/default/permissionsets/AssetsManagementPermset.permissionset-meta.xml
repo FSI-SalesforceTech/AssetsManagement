@@ -119,6 +119,10 @@
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
+        <tab>InventoryResults__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
         <tab>Inventory__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>

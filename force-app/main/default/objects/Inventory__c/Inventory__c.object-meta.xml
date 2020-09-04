@@ -159,7 +159,14 @@
         <label>棚卸No.</label>
         <type>AutoNumber</type>
     </nameField>
-    <searchLayouts/>
+    <searchLayouts>
+        <customTabListAdditionalFields>Period__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Deadline__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Period__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Deadline__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Period__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Deadline__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

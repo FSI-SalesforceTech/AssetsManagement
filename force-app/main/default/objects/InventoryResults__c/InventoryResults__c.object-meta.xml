@@ -160,7 +160,29 @@
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
-    <searchLayouts/>
+    <searchLayouts>
+        <customTabListAdditionalFields>Period__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Assets__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>AssetManagementNumber__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>BarcodeNumber__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>User__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Confirmer__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>DateConfirmed__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Period__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Assets__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>AssetManagementNumber__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>BarcodeNumber__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>User__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Confirmer__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>DateConfirmed__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Period__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Assets__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>AssetManagementNumber__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>BarcodeNumber__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>User__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Confirmer__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>DateConfirmed__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

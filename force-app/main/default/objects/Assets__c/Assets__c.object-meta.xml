@@ -159,7 +159,18 @@
         <trackHistory>false</trackHistory>
         <type>Text</type>
     </nameField>
-    <searchLayouts/>
+    <searchLayouts>
+        <customTabListAdditionalFields>AssetManagementNumber__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>BarcodeNumber__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>User__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>InstallationLocation__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>InventoryTarget__c</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>AssetManagementNumber__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>BarcodeNumber__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>User__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>InstallationLocation__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>InventoryTarget__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
