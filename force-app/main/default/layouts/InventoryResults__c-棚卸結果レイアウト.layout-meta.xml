@@ -16,6 +16,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>User__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Confirmer__c</field>
             </layoutItems>
             <layoutItems>
@@ -29,10 +33,6 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>BarcodeNumber__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>User__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

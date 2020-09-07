@@ -4,6 +4,10 @@
         <application>AssetsManagement</application>
         <visible>true</visible>
     </applicationVisibilities>
+    <classAccesses>
+        <apexClass>InventoryTriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <fieldPermissions>
         <editable>true</editable>
         <field>Assets__c.AssetManagementNumber__c</field>
@@ -70,7 +74,7 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>InventoryResults__c.User__c</field>
         <readable>true</readable>
     </fieldPermissions>

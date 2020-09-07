@@ -62,6 +62,12 @@
     </layoutSections>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>Assets__c</fields>
+        <fields>AssetManagementNumber__c</fields>
+        <fields>BarcodeNumber__c</fields>
+        <fields>User__c</fields>
+        <fields>DateConfirmed__c</fields>
+        <fields>Confirmer__c</fields>
         <relatedList>InventoryResults__c.InventoryYear__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
