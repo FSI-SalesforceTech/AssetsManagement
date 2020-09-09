@@ -69,11 +69,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>InventoryResults__c.Period__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>InventoryResults__c.User__c</field>
         <readable>true</readable>
@@ -128,6 +123,10 @@
     </tabSettings>
     <tabSettings>
         <tab>Inventory__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>inventMobileApplicationTab</tab>
         <visibility>Visible</visibility>
     </tabSettings>
 </PermissionSet>

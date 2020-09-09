@@ -1,0 +1,100 @@
+<template>
+    <lightning-card>
+        <template if:true={home}>
+            <div class=" slds-notify_alert slds-theme_alert-texture slds-theme_info" role="info">
+                <span class="slds-assistive-text">info</span>
+                <span class="slds-icon_container slds-icon-utility-user slds-var-m-right_x-small">
+                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                    </svg>
+                </span>
+                <h2>実施する作業を選択してください。</h2>
+            </div>
+            <div class="slds-var-p-around_medium slds-align_absolute-center">
+                <lightning-button variant="brand-outline" icon-name="utility:check" label="棚卸" title="棚卸" onclick={handleClickAssets} class="slds-var-m-left_x-small"></lightning-button>
+            </div>
+            <div class="slds-var-p-around_medium slds-align_absolute-center">
+                <lightning-button variant="brand-outline" icon-name="utility:search" label="検索" title="検索" onclick={handleClickSearch} class="slds-var-m-left_x-small"></lightning-button>
+            </div>
+        </template>
+        <template if:true={inventory}>
+            <div class="slds-text-align_center">
+                <lightning-icon icon-name="utility:edit_form" alternative-text="棚卸しを実施" title="棚卸しを実施"></lightning-icon>
+                <h1>棚卸しを実施</h1>
+            </div>
+            <div class="slds-var-p-around_medium slds-align_absolute-center">
+                <lightning-button variant="brand" icon-name="utility:photo" label="スキャン" title="スキャン" onclick={handleClickAssetsExec} class="slds-var-m-left_x-small"></lightning-button>
+                <lightning-button variant="success" icon-name="utility:home" label="ホーム" title="ホーム" onclick={handleClickHome} class="slds-var-m-left_x-small"></lightning-button>
+            </div>
+            <template if:true={InventoryResultsList.data}>
+                <div class="slds-var-m-around_medium">
+                    <template if:true={InventoryResultsList.data}>
+                        <template for:each={InventoryResultsList.data} for:item="i">
+                            <lightning-record-edit-form key={i.Id} object-api-name="InventoryResults__c" record-id={i.Id} onsuccess={handleEditSuccess}>
+                                <lightning-messages></lightning-messages>
+                                <lightning-output-field field-name="AssetManagementNumber__c"></lightning-output-field>
+                                <lightning-output-field field-name="BarcodeNumber__c"></lightning-output-field>
+                                <lightning-input-field field-name='DateConfirmed__c' value={today} date-style="short"></lightning-input-field>
+                                <lightning-input-field field-name='Confirmer__c' value={userId}></lightning-input-field>
+                                <lightning-input-field field-name='User__c' value={userId}></lightning-input-field>
+                                <center>
+                                    <lightning-button
+                                        class="slds-text-align_center slds-var-m-top_small"
+                                        variant="brand"
+                                        type="submit"
+                                        name="update"
+                                        label="更新">
+                                    </lightning-button>
+                                </center>
+                            </lightning-record-edit-form>
+                        </template>
+                    </template>
+                </div>
+            </template>
+            <template if:false={InventoryResultsList.data}>
+                <div class="slds-text-align_center">
+                    <img src={noresultUrl}>
+                    <h2>検索結果はありません。</h2>
+                </div>
+            </template>
+        </template>
+        <template if:true={search}>
+            <div class="slds-text-align_center">
+                <lightning-icon icon-name="utility:search" alternative-text="検索して修正" title="検索して修正"></lightning-icon>
+                <h1>資産を検索</h1>
+            </div>
+            <div class="slds-var-p-around_medium slds-align_absolute-center">
+                <lightning-button variant="brand" icon-name="utility:photo" label="スキャン" title="スキャン" onclick={handleClickSearchExec} class="slds-var-m-left_x-small"></lightning-button>
+                <lightning-button variant="success" icon-name="utility:home" label="ホーム" title="ホーム" onclick={handleClickHome} class="slds-var-m-left_x-small"></lightning-button>
+            </div>
+            <div class="slds-var-m-around_medium">
+                <template if:true={AssetsList.data}>
+                    <template for:each={AssetsList.data} for:item="i">
+                        <lightning-record-edit-form key={i.Id} object-api-name="Assets__c" record-id={i.Id} onsuccess={handleEditSuccess}>
+                            <lightning-messages></lightning-messages>
+                            <lightning-output-field field-name="Name"></lightning-output-field>
+                            <lightning-output-field field-name="AssetManagementNumber__c"></lightning-output-field>
+                            <lightning-output-field field-name="BarcodeNumber__c"></lightning-output-field>
+                            <lightning-input-field field-name='User__c' value={userId}></lightning-input-field>
+                            <lightning-input-field field-name='InstallationLocation__c'></lightning-input-field>
+                            <lightning-input-field field-name='InventoryTarget__c'></lightning-input-field>
+                            <lightning-button
+                                class="slds-var-m-top_small"
+                                variant="brand"
+                                type="submit"
+                                name="update"
+                                label="更新">
+                            </lightning-button>
+                        </lightning-record-edit-form>
+                    </template>
+                </template>
+            </div>
+            <template if:false={AssetsList.data}>
+                <div class="slds-text-align_center">
+                    <img src={noresultUrl}>
+                    <h2>検索結果はありません。</h2>
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+</template>
