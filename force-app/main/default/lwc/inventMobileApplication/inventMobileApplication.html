@@ -28,16 +28,16 @@
             </div>
             <template if:true={InventoryResultsList.data}>
                 <div class="slds-var-m-around_medium">
-                    <template if:true={InventoryResultsList.data}>
-                        <template for:each={InventoryResultsList.data} for:item="i">
-                            <lightning-record-edit-form key={i.Id} object-api-name="InventoryResults__c" record-id={i.Id} onsuccess={handleEditSuccess}>
-                                <lightning-messages></lightning-messages>
-                                <lightning-output-field field-name="AssetManagementNumber__c"></lightning-output-field>
-                                <lightning-output-field field-name="BarcodeNumber__c"></lightning-output-field>
-                                <lightning-input-field field-name='DateConfirmed__c' value={today} date-style="short"></lightning-input-field>
-                                <lightning-input-field field-name='Confirmer__c' value={userId}></lightning-input-field>
-                                <lightning-input-field field-name='User__c' value={userId}></lightning-input-field>
-                                <center>
+                    <center>
+                        <template if:true={InventoryResultsList.data}>
+                            <template for:each={InventoryResultsList.data} for:item="i">
+                                <lightning-record-edit-form key={i.Id} object-api-name="InventoryResults__c" record-id={i.Id} onsuccess={handleEditSuccess}>
+                                    <lightning-messages></lightning-messages>
+                                    <lightning-output-field field-name="AssetManagementNumber__c"></lightning-output-field>
+                                    <lightning-output-field field-name="BarcodeNumber__c"></lightning-output-field>
+                                    <lightning-input-field field-name='DateConfirmed__c' value={today} date-style="short"></lightning-input-field>
+                                    <lightning-input-field field-name='Confirmer__c' value={userId}></lightning-input-field>
+                                    <lightning-input-field field-name='User__c' value={userId}></lightning-input-field>
                                     <lightning-button
                                         class="slds-text-align_center slds-var-m-top_small"
                                         variant="brand"
@@ -45,10 +45,10 @@
                                         name="update"
                                         label="更新">
                                     </lightning-button>
-                                </center>
-                            </lightning-record-edit-form>
+                                </lightning-record-edit-form>
+                            </template>
                         </template>
-                    </template>
+                    </center>
                 </div>
             </template>
             <template if:false={InventoryResultsList.data}>
@@ -68,26 +68,28 @@
                 <lightning-button variant="success" icon-name="utility:home" label="ホーム" title="ホーム" onclick={handleClickHome} class="slds-var-m-left_x-small"></lightning-button>
             </div>
             <div class="slds-var-m-around_medium">
-                <template if:true={AssetsList.data}>
-                    <template for:each={AssetsList.data} for:item="i">
-                        <lightning-record-edit-form key={i.Id} object-api-name="Assets__c" record-id={i.Id} onsuccess={handleEditSuccess}>
-                            <lightning-messages></lightning-messages>
-                            <lightning-output-field field-name="Name"></lightning-output-field>
-                            <lightning-output-field field-name="AssetManagementNumber__c"></lightning-output-field>
-                            <lightning-output-field field-name="BarcodeNumber__c"></lightning-output-field>
-                            <lightning-input-field field-name='User__c' value={userId}></lightning-input-field>
-                            <lightning-input-field field-name='InstallationLocation__c'></lightning-input-field>
-                            <lightning-input-field field-name='InventoryTarget__c'></lightning-input-field>
-                            <lightning-button
-                                class="slds-var-m-top_small"
-                                variant="brand"
-                                type="submit"
-                                name="update"
-                                label="更新">
-                            </lightning-button>
-                        </lightning-record-edit-form>
+                <center>
+                    <template if:true={AssetsList.data}>
+                        <template for:each={AssetsList.data} for:item="i">
+                            <lightning-record-edit-form key={i.Id} object-api-name="Assets__c" record-id={i.Id} onsuccess={handleEditSuccess}>
+                                <lightning-messages></lightning-messages>
+                                <lightning-output-field field-name="Name"></lightning-output-field>
+                                <lightning-output-field field-name="AssetManagementNumber__c"></lightning-output-field>
+                                <lightning-output-field field-name="BarcodeNumber__c"></lightning-output-field>
+                                <lightning-input-field field-name='User__c' value={userId}></lightning-input-field>
+                                <lightning-input-field field-name='InstallationLocation__c'></lightning-input-field>
+                                <lightning-input-field field-name='InventoryTarget__c'></lightning-input-field>
+                                <lightning-button
+                                    class="slds-var-m-top_small"
+                                    variant="brand"
+                                    type="submit"
+                                    name="update"
+                                    label="更新">
+                                </lightning-button>
+                            </lightning-record-edit-form>
+                        </template>
                     </template>
-                </template>
+                </center>
             </div>
             <template if:false={AssetsList.data}>
                 <div class="slds-text-align_center">
