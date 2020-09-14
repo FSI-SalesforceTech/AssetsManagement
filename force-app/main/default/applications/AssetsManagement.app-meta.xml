@@ -16,6 +16,7 @@
     <tabs>InventoryResults__c</tabs>
     <tabs>Assets__c</tabs>
     <tabs>standard-report</tabs>
+    <tabs>inventMobileApplicationTab</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>UtilityBar</utilityBar>
 </CustomApplication>
