@@ -23,7 +23,7 @@
                 <h1>棚卸しを実施</h1>
             </div>
             <div class="slds-var-p-around_medium slds-align_absolute-center">
-                <lightning-button variant="brand" icon-name="utility:photo" label="スキャン" title="スキャン" onclick={handleClickAssetsExec} class="slds-var-m-left_x-small"></lightning-button>
+                <lightning-button variant="brand" icon-name="utility:photo" label="スキャン" title="スキャン" disabled={scanButtonDisabled} onclick={handleBeginScanClick} class="slds-var-m-left_x-small"></lightning-button>
                 <lightning-button variant="success" icon-name="utility:home" label="ホーム" title="ホーム" onclick={handleClickHome} class="slds-var-m-left_x-small"></lightning-button>
             </div>
             <template if:true={InventoryResultsList.data}>
@@ -32,7 +32,6 @@
                         <template if:true={InventoryResultsList.data}>
                             <template for:each={InventoryResultsList.data} for:item="i">
                                 <lightning-record-edit-form key={i.Id} object-api-name="InventoryResults__c" record-id={i.Id} onsuccess={handleEditSuccess}>
-                                    <lightning-messages></lightning-messages>
                                     <lightning-output-field field-name="AssetManagementNumber__c"></lightning-output-field>
                                     <lightning-output-field field-name="BarcodeNumber__c"></lightning-output-field>
                                     <lightning-input-field field-name='DateConfirmed__c' value={today} date-style="short"></lightning-input-field>
@@ -64,7 +63,7 @@
                 <h1>資産を検索</h1>
             </div>
             <div class="slds-var-p-around_medium slds-align_absolute-center">
-                <lightning-button variant="brand" icon-name="utility:photo" label="スキャン" title="スキャン" onclick={handleClickSearchExec} class="slds-var-m-left_x-small"></lightning-button>
+                <lightning-button variant="brand" icon-name="utility:photo" label="スキャン" title="スキャン" disabled={scanButtonDisabled} onclick={handleBeginScanClick} class="slds-var-m-left_x-small"></lightning-button>
                 <lightning-button variant="success" icon-name="utility:home" label="ホーム" title="ホーム" onclick={handleClickHome} class="slds-var-m-left_x-small"></lightning-button>
             </div>
             <div class="slds-var-m-around_medium">
