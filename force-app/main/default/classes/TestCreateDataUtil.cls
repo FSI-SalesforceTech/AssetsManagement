@@ -9,7 +9,6 @@ public with sharing class TestCreateDataUtil {
      *@資産のデータ作成
      */
     @TestVisible List<Assets__c> createAssetsRecord(String recordName){
-
             List<Integer> AssetManagementNumber = new List<Integer>();
             AssetManagementNumber.add(11111111);
             AssetManagementNumber.add(22222222);
@@ -17,12 +16,12 @@ public with sharing class TestCreateDataUtil {
             AssetManagementNumber.add(44444444);
             AssetManagementNumber.add(55555555);
 
-            List<Integer> BarcodeNumber = new List<Integer>();
-            BarcodeNumber.add(6666666);
-            BarcodeNumber.add(7777777);
-            BarcodeNumber.add(8888888);
-            BarcodeNumber.add(9999999);
-            BarcodeNumber.add(1222222);
+            List<String> BarcodeNumber = new List<String>();
+            BarcodeNumber.add('6666666');
+            BarcodeNumber.add('7777777');
+            BarcodeNumber.add('8888888');
+            BarcodeNumber.add('9999999');
+            BarcodeNumber.add('1222222');
             
             List<Boolean> InventoryTarget = new List<Boolean>();
             InventoryTarget.add(TRUE);
