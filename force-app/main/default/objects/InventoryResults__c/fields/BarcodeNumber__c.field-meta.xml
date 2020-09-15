@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CustomField xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>BarcodeNumber__c</fullName>
     <externalId>false</externalId>
     <formula>Assets__r.BarcodeNumber__c</formula>
     <label>バーコード番号</label>
-    <precision>18</precision>
     <required>false</required>
-    <scale>2</scale>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
-    <type>Number</type>
+    <type>Text</type>
     <unique>false</unique>
 </CustomField>
